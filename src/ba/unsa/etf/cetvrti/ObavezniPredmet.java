@@ -16,4 +16,11 @@ public class ObavezniPredmet {
         this.brojStudenata=0;
         upisanistudenti=new Student[100];
     }
+
+
+
+
+    
+
+
 }
