@@ -21,4 +21,6 @@ public class Semestri {
     public void dodajIzborni(IzborniPredmet izborni){
         return;
     }
+
+    
 }
