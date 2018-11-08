@@ -1,11 +1,15 @@
 package ba.unsa.etf.cetvrti;
 
+import java.util.Iterator;
+
 public class Predmet {
     private String nazivPredmeta="";
-    private int brojStudenata=0;
+    public static int brojStudenata=0;
     private final int maxBroj;
     private int ECTSBodovi;
     private Student[] upisanistudenti=null;
+
+    public static int index=0;
 
     public Predmet(String naziv,int broj,int kapacitet)
     {
@@ -39,11 +43,21 @@ public class Predmet {
     public void setECTSBodovi(int ECTSBodovi) {
         this.ECTSBodovi = ECTSBodovi;
     }
+
     public void upisiStudenta(Student s)
     {
-        return;
+        /*Iterator<Student> it;while(it.hasNext()) {}*/
+
+        upisanistudenti[index].setImePrezime(s.getImePrezime());
+        upisanistudenti[index].setBrIndex(s.getBrIndex());
+        index++;
+        brojStudenata++;
+
     }
-    public String ispisi(){
-        return null;
+
+
+    public void ispisi() {
+
+        for(int i=0; i<maxBroj; i++) System.out.println(upisanistudenti[i].getImePrezime()+upisanistudenti[i].getBrIndex()+this.getNazivPredmeta());
     }
 }

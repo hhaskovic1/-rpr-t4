@@ -16,7 +16,7 @@ public class Student {
 
 
     public String getImePrezime() {
-        return null;
+        return imePrezime;
     }
 
     public void setImePrezime(String imePrezime) {
