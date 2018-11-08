@@ -1,7 +1,5 @@
 package ba.unsa.etf.cetvrti;
 
-import java.util.Iterator;
-
 public class Predmet {
     private String nazivPredmeta="";
     public static int brojStudenata=0;
@@ -46,7 +44,6 @@ public class Predmet {
 
     public void upisiStudenta(Student s)
     {
-        /*Iterator<Student> it;while(it.hasNext()) {}*/
 
         upisanistudenti[index].setImePrezime(s.getImePrezime());
         upisanistudenti[index].setBrIndex(s.getBrIndex());
@@ -55,12 +52,8 @@ public class Predmet {
 
     }
 
-
     public String ispisi() {
-
         for(int i=0; i<maxBroj; i++) return(upisanistudenti[i].getImePrezime()+upisanistudenti[i].getBrIndex()+this.getNazivPredmeta());
-
-
         return null;
     }
 }

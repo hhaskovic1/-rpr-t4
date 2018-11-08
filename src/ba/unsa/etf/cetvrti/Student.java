@@ -9,12 +9,6 @@ public class Student {
         setBrIndex(indeks);
     }
 
-    public String Ispisi()
-    {
-        return null;
-    }
-
-
     public String getImePrezime() {
         return imePrezime;
     }
@@ -29,5 +23,10 @@ public class Student {
 
     public void setBrIndex(int brIndex) {
         this.brIndex = brIndex;
+    }
+
+    public String Ispisi()
+    {
+        return (getImePrezime()+getImePrezime());
     }
 }
