@@ -56,8 +56,11 @@ public class Predmet {
     }
 
 
-    public void ispisi() {
+    public String ispisi() {
 
-        for(int i=0; i<maxBroj; i++) System.out.println(upisanistudenti[i].getImePrezime()+upisanistudenti[i].getBrIndex()+this.getNazivPredmeta());
+        for(int i=0; i<maxBroj; i++) return(upisanistudenti[i].getImePrezime()+upisanistudenti[i].getBrIndex()+this.getNazivPredmeta());
+
+
+        return null;
     }
 }
