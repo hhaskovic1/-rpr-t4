@@ -1,10 +1,10 @@
 package ba.unsa.etf.cetvrti;
 
-public class Semestri {
+public class Semestar {
     private String nazivSemestra = "";
     private Predmet[] predmeti = null;
 
-    public Semestri(String naziv,ObavezniPredmet[] obavezni){}
+    public Semestar(String naziv, Predmet[] obavezni){}
 
     public String ispisi(){
         return null;
@@ -18,7 +18,7 @@ public class Semestri {
     public void setNazivSemestra(String nazivSemestra) {
         this.nazivSemestra = nazivSemestra;
     }
-    public void dodajIzborni(IzborniPredmet izborni){
+    public void dodajIzborni(Predmet izborni){
         return;
     }
 

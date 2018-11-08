@@ -20,14 +20,14 @@ public class Student {
     }
 
     public void setImePrezime(String imePrezime) {
-        return; //this.imePrezime = imePrezime;
+        this.imePrezime = imePrezime;
     }
 
     public int getBrIndex() {
-        return 0;//return brIndex;
+        return brIndex;
     }
 
     public void setBrIndex(int brIndex) {
-        return;//this.brIndex = brIndex;
+        this.brIndex = brIndex;
     }
 }
