@@ -1,49 +1,59 @@
 package ba.unsa.etf.cetvrti;
 
+import java.util.ArrayList;
+
 public class Predmet {
-    private String nazivPredmeta="";
-    private int brojStudenata=0;
-    private final int maxBroj;
-    private int ECTSBodovi;
-    private Student[] upisanistudenti=null;
+    private String imePredmeta;
+    private int kreditiECTS;
+    ArrayList<Student> studenti = new ArrayList<>();
+    public boolean izborni;
+    private int brojStudenata;
+     int kapacitet;
 
-    public Predmet(String naziv,int broj,int kapacitet)
-    {
-        this.nazivPredmeta=naziv;
-        this.ECTSBodovi=broj;
-        this.maxBroj=kapacitet;
-        this.brojStudenata=0;
-        upisanistudenti=new Student[100];
+    public Predmet(String imePredmeta, int kreditiECTS, boolean izborni){
+        this.setImePredmeta(imePredmeta);
+        this.setKreditiECTS(kreditiECTS);
+        this.izborni = izborni;
     }
 
-    public String getNazivPredmeta() {
-        return nazivPredmeta;
+    public void upisiStudenta(Student student){
+        if(brojStudenata < kapacitet) {
+            studenti.add(student);
+            student.setECTSKredite(student.getKreditiECTS() + kreditiECTS);
+            brojStudenata++;
+        }
     }
 
-    public void setNazivPredmeta(String nazivPredmeta) {
-        this.nazivPredmeta = nazivPredmeta;
+    public void ispisiStudenta(Student student){
+        studenti.remove(student);
+        student.setECTSKredite(student.getKreditiECTS() - kreditiECTS);
     }
 
-    public int getBrojStudenata() {
-        return brojStudenata;
+    public boolean jeLiPun(){
+        return (brojStudenata == kapacitet);
     }
 
-    public void setBrojStudenata(int brojStudenata) {
-        this.brojStudenata = brojStudenata;
+    public void setImePredmeta(String imePredmeta){
+        this.imePredmeta=imePredmeta;
     }
 
-    public int getECTSBodovi() {
-        return ECTSBodovi;
+    public void setKreditiECTS(int kreditiECTS){
+        this.kreditiECTS=kreditiECTS;
     }
 
-    public void setECTSBodovi(int ECTSBodovi) {
-        this.ECTSBodovi = ECTSBodovi;
+    public String getImePredmeta(){
+        return this.imePredmeta;
     }
-    public void upisiStudenta(Student s)
-    {
-        return;
+
+    public int getKreditiECTS(){
+        return this.kreditiECTS;
     }
-    public String ispisi(){
-        return null;
+
+    public boolean jaLiIzborni(){
+        return this.izborni;
+    }
+
+    public void ispisiStudente(){
+        studenti.clear();
     }
 }

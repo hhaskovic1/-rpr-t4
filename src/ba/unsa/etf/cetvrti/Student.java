@@ -7,7 +7,7 @@ public class Student {
     String prezime="";
     int brojIndeksa;
     int kreditiECTS;
-    ArrayList<Predmet> predmeti = new ArrayList<Predmet>();
+    ArrayList<Predmet> predmeti = new ArrayList<>();
 
     public Student(String ime, String prezime, int brojIndeksa){
         this.ime = ime;

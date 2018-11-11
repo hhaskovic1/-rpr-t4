@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Semestar {
 
     private int brojSemestra;
-    ArrayList<Predmet> obavezniPredmeti = new ArrayList<Predmet>();
-    ArrayList<Predmet> izborniPredmeti = new ArrayList<Predmet>();
+    ArrayList<Predmet> obavezniPredmeti = new ArrayList<>();
+    ArrayList<Predmet> izborniPredmeti = new ArrayList<>();
 
     public Semestar(int brojSemestra) {
         this.setBrojSemestra(brojSemestra);
