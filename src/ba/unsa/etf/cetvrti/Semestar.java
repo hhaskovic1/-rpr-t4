@@ -3,10 +3,16 @@ package ba.unsa.etf.cetvrti;
 import java.util.ArrayList;
 
 public class Semestar {
-    int brojSemestra;
+
+    private int brojSemestra;
     ArrayList<Predmet> obavezniPredmeti = new ArrayList<Predmet>();
     ArrayList<Predmet> izborniPredmeti = new ArrayList<Predmet>();
+
     public Semestar(int brojSemestra) {
+        this.setBrojSemestra(brojSemestra);
+    }
+
+    public void setBrojSemestra(int brojSemestra) {
         this.brojSemestra = brojSemestra;
     }
 

@@ -1,33 +1,64 @@
 package ba.unsa.etf.cetvrti;
 
+import java.util.ArrayList;
+
 public class Student {
-    private String imePrezime="";
-    private int brIndex=0;
+    String ime="";
+    String prezime="";
+    int brojIndeksa;
+    int kreditiECTS;
+    ArrayList<Predmet> predmeti = new ArrayList<Predmet>();
 
-    public Student(String string,int indeks){
-        setImePrezime(string);
-        setBrIndex(indeks);
+    public Student(String ime, String prezime, int brojIndeksa){
+        this.ime = ime;
+        this.prezime = prezime;
+        this.brojIndeksa = brojIndeksa;
     }
 
-    public String Ispisi()
-    {
-        return null;
+    public void setIme(String ime){
+        this.ime=ime;
     }
 
-
-    public String getImePrezime() {
-        return null;
+    public void setPrezime(String prezime){
+        this.prezime=prezime;
     }
 
-    public void setImePrezime(String imePrezime) {
-        return; //this.imePrezime = imePrezime;
+    public void setBrojIndeksa(int brojIndeksa){
+        this.brojIndeksa=brojIndeksa;
     }
 
-    public int getBrIndex() {
-        return 0;//return brIndex;
+    public void setKreditiECTS(int kreditiECTS){
+        this.kreditiECTS=kreditiECTS;
     }
 
-    public void setBrIndex(int brIndex) {
-        return;//this.brIndex = brIndex;
+    public String getIme(){
+        return this.ime;
+    }
+
+    public String getPrezime(){
+        return this.prezime;
+    }
+
+    public int getBrojIndeksa(){
+        return this.brojIndeksa;
+    }
+
+    public int getKreditiECTS(){
+        return this.kreditiECTS;
+    }
+
+    public void setECTSKredite(int kreditiECTS){
+        this.kreditiECTS = kreditiECTS;
+    }
+
+    public String ispisi(){
+        String s;
+        s = ime + " " + prezime + "(" + brojIndeksa + ")";
+        return  s;
+    }
+
+    public void ispisiPredmete(){
+        predmeti.clear();
+        setECTSKredite(0);
     }
 }
